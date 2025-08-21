@@ -11,7 +11,14 @@ nginx -t
 
 # Prepare venv for klipper and moonraker
 python3 -m venv ~/moonraker-venv
+~/moonraker-venv/bin/activate
+pip install --upgrade pip
+deactivate
+
 python3 -m venv ~/klipper-venv
+~/klipper-venv/bin/activate
+pip install --upgrade pip
+deactivate
 
 
 echo -e "${COL}\nDownloading moonraker, klipper, fluidd, fluidd-config, gcode_shell_command...\n${NC}"
